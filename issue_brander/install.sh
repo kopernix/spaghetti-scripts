@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
-/bin/cp -a /etc/issue.net /etc/issue.backup_issue_brander --verbose ;
-/bin/cp -a /etc/issue.net /etc/issue-original --verbose;
+/bin/cp -a /etc/issue /etc/issue.backup_issue_brander --verbose ;
+/bin/cp -a /etc/issue /etc/issue-original --verbose;
 /bin/cat ./issue.base > /etc/issue-original;
 /bin/cp -v ./addip2issue /etc/network/if-up.d/addip2issue;
 /bin/chmod 755 /etc/network/if-up.d/addip2issue --verbose;
